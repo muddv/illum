@@ -1,0 +1,21 @@
+{
+    "manifest_version": 3,
+    "name": "Comment and highlight",
+    "version": "0.1",
+    "action": {
+        "default_popup": "./popup.html"
+    },
+    "permissions": [
+        "activeTab", 
+        "scripting"
+    ],
+    "content_scripts": [
+        {
+            "matches": ["<all_urls>"],
+            "js" : [
+                "content.ts",
+                "node_modules/@webcomponents/custom-elements/custom-elements.min.js"
+            ]
+        }
+    ]   
+}
